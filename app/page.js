@@ -1,89 +1,114 @@
 export default function Home() {
   return (
-    <main className="min-h-screen bg-slate-950 text-white">
+    <main style={{
+      background:"#020617",
+      color:"white",
+      minHeight:"100vh",
+      fontFamily:"Arial, sans-serif"
+    }}>
 
       {/* HEADER */}
-      <header className="sticky top-0 z-50 border-b border-white/10 bg-slate-950/80 backdrop-blur">
-        <div className="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
-          <h1 className="text-2xl font-bold tracking-widest text-cyan-400">
-            BRIDA ENERGY
-          </h1>
+      <header style={{
+        padding:"20px 40px",
+        borderBottom:"1px solid rgba(255,255,255,.1)",
+        display:"flex",
+        justifyContent:"space-between",
+        alignItems:"center"
+      }}>
+        <h1 style={{
+          fontSize:"38px",
+          fontWeight:"900",
+          color:"#22d3ee"
+        }}>
+          BRIDA ENERGY
+        </h1>
 
-          <nav className="hidden md:flex gap-8 text-sm text-slate-300">
-            <a href="#servicios">Servicios</a>
-            <a href="#beneficios">Beneficios</a>
-            <a href="#contacto">Contacto</a>
-          </nav>
-
-          <a
-            href="https://wa.me/523313313170"
-            target="_blank"
-            className="px-5 py-2 rounded-xl bg-cyan-500 text-black font-bold"
-          >
-            WhatsApp
-          </a>
-        </div>
+        <a
+          href="https://wa.me/523313313170"
+          target="_blank"
+          style={{
+            background:"#22d3ee",
+            color:"#000",
+            padding:"12px 22px",
+            borderRadius:"12px",
+            textDecoration:"none",
+            fontWeight:"bold"
+          }}
+        >
+          WhatsApp
+        </a>
       </header>
 
       {/* HERO */}
-      <section className="max-w-7xl mx-auto px-6 py-28 grid md:grid-cols-2 gap-16 items-center">
+      <section style={{
+        maxWidth:"1200px",
+        margin:"auto",
+        padding:"80px 30px"
+      }}>
+        <p style={{
+          color:"#22d3ee",
+          fontWeight:"bold",
+          letterSpacing:"2px"
+        }}>
+          Energía inteligente para Guadalajara
+        </p>
 
-        <div>
-          <p className="text-cyan-400 font-semibold mb-3 uppercase tracking-widest">
-            Energía inteligente para Guadalajara
-          </p>
+        <h2 style={{
+          fontSize:"64px",
+          fontWeight:"900",
+          lineHeight:"1.1",
+          marginTop:"20px"
+        }}>
+          Reduce tu recibo de luz hasta 95%
+        </h2>
 
-          <h2 className="text-5xl md:text-7xl font-black leading-tight">
-            Reduce tu recibo de luz hasta un 95%
-          </h2>
+        <p style={{
+          marginTop:"25px",
+          fontSize:"22px",
+          color:"#cbd5e1",
+          maxWidth:"700px"
+        }}>
+          Paneles solares premium con instalación profesional,
+          trámite CFE y soporte real.
+        </p>
 
-          <p className="mt-6 text-slate-300 text-lg">
-            Paneles solares premium con instalación profesional, trámite ante
-            CFE y soporte real.
-          </p>
-
-          <div className="mt-10 flex gap-4 flex-wrap">
-            <a
-              href="https://wa.me/523313313170"
-              target="_blank"
-              className="px-8 py-4 rounded-2xl bg-cyan-500 text-black font-bold"
-            >
-              Cotizar Ahora
-            </a>
-
-            <a
-              href="#servicios"
-              className="px-8 py-4 rounded-2xl border border-cyan-400"
-            >
-              Ver Servicios
-            </a>
-          </div>
+        <div style={{marginTop:"35px"}}>
+          <a
+            href="https://wa.me/523313313170"
+            target="_blank"
+            style={{
+              background:"#22d3ee",
+              color:"#000",
+              padding:"16px 28px",
+              borderRadius:"14px",
+              textDecoration:"none",
+              fontWeight:"bold",
+              marginRight:"15px"
+            }}
+          >
+            Cotizar Ahora
+          </a>
         </div>
-
-        <div className="rounded-3xl border border-cyan-500/20 bg-slate-900 p-10 shadow-2xl">
-          <div className="grid grid-cols-2 gap-4 text-center">
-            <div className="p-5 rounded-2xl bg-slate-800">
-              Ahorro 95%
-            </div>
-            <div className="p-5 rounded-2xl bg-slate-800">
-              Garantía real
-            </div>
-            <div className="p-5 rounded-2xl bg-slate-800">
-              Trámite CFE
-            </div>
-            <div className="p-5 rounded-2xl bg-slate-800">
-              Monitoreo App
-            </div>
-          </div>
-        </div>
-
       </section>
 
       {/* SERVICIOS */}
-      <section id="servicios" className="max-w-7xl mx-auto px-6 py-24">
-        <h3 className="text-4xl font-bold mb-10">Servicios</h3>
+      <section style={{
+        maxWidth:"1200px",
+        margin:"auto",
+        padding:"40px 30px"
+      }}>
+        <h3 style={{
+          fontSize:"42px",
+          marginBottom:"30px"
+        }}>
+          Servicios
+        </h3>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div style={{
+          display:"grid",
+          gridTemplateColumns:"repeat(auto-fit,minmax(250px,1fr))",
+          gap:"20px"
+        }}>
 
           {[
             "Paneles Residenciales",
@@ -91,12 +116,14 @@ export default function Home() {
             "Calentadores Solares",
             "Mantenimiento",
             "Trámites CFE",
-            "Diagnóstico Energético",
-          ].map((item) => (
-            <div
-              key={item}
-              className="rounded-3xl bg-slate-900 p-8 border border-white/10 hover:border-cyan-400 transition"
-            >
+            "Diagnóstico Energético"
+          ].map((item)=>(
+            <div key={item} style={{
+              background:"#0f172a",
+              padding:"25px",
+              borderRadius:"20px",
+              border:"1px solid rgba(34,211,238,.2)"
+            }}>
               {item}
             </div>
           ))}
@@ -104,61 +131,51 @@ export default function Home() {
         </div>
       </section>
 
-      {/* BENEFICIOS */}
-      <section
-        id="beneficios"
-        className="bg-slate-900 border-y border-white/10"
-      >
-        <div className="max-w-7xl mx-auto px-6 py-24">
-          <h3 className="text-4xl font-bold mb-10">
-            ¿Por qué elegirnos?
-          </h3>
-
-          <div className="grid md:grid-cols-4 gap-6">
-
-            {[
-              "Atención personalizada",
-              "Equipos premium",
-              "Instalación limpia",
-              "Retorno de inversión",
-            ].map((item) => (
-              <div
-                key={item}
-                className="rounded-3xl bg-slate-950 p-6 border border-white/10"
-              >
-                {item}
-              </div>
-            ))}
-
-          </div>
-        </div>
-      </section>
-
-      {/* CONTACTO */}
-      <section id="contacto" className="max-w-7xl mx-auto px-6 py-24">
-        <div className="rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 p-12 text-black">
-          <h3 className="text-4xl font-black">
+      {/* CTA */}
+      <section style={{
+        maxWidth:"1200px",
+        margin:"auto",
+        padding:"80px 30px"
+      }}>
+        <div style={{
+          background:"linear-gradient(90deg,#22d3ee,#2563eb)",
+          padding:"50px",
+          borderRadius:"28px",
+          color:"black"
+        }}>
+          <h3 style={{
+            fontSize:"42px",
+            fontWeight:"900"
+          }}>
             Solicita tu cotización hoy
           </h3>
 
-          <p className="mt-4 text-lg">
-            Envíanos tu recibo de CFE y calcula tu ahorro real.
+          <p style={{
+            fontSize:"22px",
+            marginTop:"15px"
+          }}>
+            Envíanos tu recibo CFE y calcula tu ahorro real.
           </p>
 
           <a
             href="https://wa.me/523313313170"
             target="_blank"
-            className="inline-block mt-8 px-8 py-4 rounded-2xl bg-black text-white font-bold"
+            style={{
+              display:"inline-block",
+              marginTop:"25px",
+              background:"black",
+              color:"white",
+              padding:"16px 26px",
+              borderRadius:"14px",
+              textDecoration:"none",
+              fontWeight:"bold"
+            }}
           >
             Hablar por WhatsApp
           </a>
         </div>
       </section>
 
-      {/* FOOTER */}
-      <footer className="border-t border-white/10 py-8 text-center text-slate-400">
-        © 2026 BRIDA Energy
-      </footer>
     </main>
   );
 }
