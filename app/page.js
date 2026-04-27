@@ -1,1 +1,110 @@
-export default function BridaLanding(){return (<div className='min-h-screen bg-slate-950 text-white font-sans'><header className='sticky top-0 z-50 backdrop-blur border-b border-cyan-500/20 bg-slate-950/80'><div className='max-w-7xl mx-auto px-6 py-4 flex items-center justify-between'><div className='text-2xl font-bold tracking-wider text-cyan-400'><div className='flex items-center gap-3'><div className='w-10 h-10 rounded-full border-4 border-cyan-400 border-r-transparent'></div><span className='text-2xl font-bold tracking-wider text-cyan-400'>BRIDA ENERGY</span></div></div><nav className='hidden md:flex gap-6 text-sm'><a href='#servicios'>Servicios</a><a href='#beneficios'>Beneficios</a><a href='#contacto'>Contacto</a></nav><a className='px-4 py-2 rounded-xl bg-cyan-500 text-slate-950 font-semibold'>Cotizar</a></div></header><main><section className='relative overflow-hidden'><div className='absolute inset-0 opacity-20'><div className='absolute top-10 left-10 w-32 h-32 rotate-45 border border-cyan-400'></div><div className='absolute top-40 right-24 w-40 h-40 rotate-45 border border-cyan-400'></div><div className='absolute bottom-10 left-1/3 w-24 h-24 rotate-45 border border-cyan-400'></div></div><div className='max-w-7xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-12 items-center'><div><p className='text-cyan-400 font-semibold mb-3'>Energía Inteligente para Jalisco</p><h1 className='text-5xl md:text-6xl font-black leading-tight'>Reduce tu recibo de luz con paneles solares profesionales</h1><p className='mt-6 text-slate-300 text-lg'>Instalaciones residenciales y comerciales con ingeniería profesional, materiales certificados y soporte real.</p><div className='mt-8 flex gap-4'><a className='px-6 py-3 rounded-2xl bg-cyan-500 text-slate-950 font-bold'>Cotiza Hoy</a><a className='px-6 py-3 rounded-2xl border border-cyan-400'>Ver Servicios</a></div></div><div className='bg-slate-900 border border-cyan-500/30 rounded-3xl p-8 shadow-2xl'><div className='grid grid-cols-2 gap-4'>{['Ahorro hasta 95%','Garantía real','Instalación rápida','Trámite CFE'].map((i)=><div key={i} className='p-4 rounded-2xl bg-slate-800 border border-cyan-500/20'>{i}</div>)}</div></div></div></section><section id='servicios' className='max-w-7xl mx-auto px-6 py-20'><h2 className='text-4xl font-bold mb-10'>Servicios</h2><div className='grid md:grid-cols-3 gap-6'>{['Paneles Residenciales','Paneles para Negocios','Calentadores Solares','Mantenimiento','Trámites CFE','Diagnóstico Energético'].map((s)=><div key={s} className='rounded-3xl p-6 bg-slate-900 border border-cyan-500/20 hover:border-cyan-400 transition'>{s}</div>)}</div></section><section className='max-w-7xl mx-auto px-6 py-10'><div className='grid md:grid-cols-3 gap-6'><div className='rounded-3xl p-6 bg-slate-900 border border-cyan-500/20'><div className='text-cyan-400 text-3xl font-black'>500+</div><div>Clientes atendidos</div></div><div className='rounded-3xl p-6 bg-slate-900 border border-cyan-500/20'><div className='text-cyan-400 text-3xl font-black'>25 años</div><div>Vida útil estimada</div></div><div className='rounded-3xl p-6 bg-slate-900 border border-cyan-500/20'><div className='text-cyan-400 text-3xl font-black'>Premium</div><div>Materiales certificados</div></div></div></section><section id='beneficios' className='bg-slate-900/60'><div className='max-w-7xl mx-auto px-6 py-20'><h2 className='text-4xl font-bold mb-10'>¿Por qué BRIDA Energy?</h2><div className='grid md:grid-cols-4 gap-6'>{['Atención personalizada','Equipos premium','Monitoreo de consumo','Retorno de inversión'].map((b)=><div key={b} className='rounded-3xl p-6 bg-slate-950 border border-cyan-500/20'>{b}</div>)}</div></div></section><section className='max-w-7xl mx-auto px-6 py-20'><h2 className='text-4xl font-bold mb-10'>Proyectos recientes</h2><div className='grid md:grid-cols-3 gap-6'><div className='h-48 rounded-3xl bg-slate-900 border border-cyan-500/20 flex items-center justify-center'>Residencial</div><div className='h-48 rounded-3xl bg-slate-900 border border-cyan-500/20 flex items-center justify-center'>Comercial</div><div className='h-48 rounded-3xl bg-slate-900 border border-cyan-500/20 flex items-center justify-center'>Industrial</div></div></section><section id='contacto' className='max-w-7xl mx-auto px-6 py-20'><div className='rounded-3xl border border-cyan-500/30 p-10 bg-gradient-to-r from-slate-900 to-slate-800'><h2 className='text-4xl font-bold'>Solicita tu cotización</h2><p className='mt-4 text-slate-300'>Envíanos tu recibo de CFE y te ayudamos a ahorrar.</p><div className='mt-6 flex gap-4'><a className='inline-block px-6 py-3 rounded-2xl bg-cyan-500 text-slate-950 font-bold'>WhatsApp</a><a className='inline-block px-6 py-3 rounded-2xl border border-cyan-400 font-bold'>Llamar ahora</a></div></div></section></main><footer className='border-t border-cyan-500/20'><div className='max-w-7xl mx-auto px-6 py-8 text-slate-400'>© BRIDA Energy</div></footer></div>)}
+export default function Home() {
+  return (
+    <main className="site">
+
+      {/* NAVBAR */}
+      <header className="navbar">
+        <div className="logo">BRIDA ENERGY</div>
+
+        <nav>
+          <a href="#servicios">Servicios</a>
+          <a href="#beneficios">Beneficios</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
+
+        <a
+          className="btn-primary"
+          href="https://wa.me/523313313170"
+          target="_blank"
+        >
+          Cotizar
+        </a>
+      </header>
+
+      {/* HERO */}
+      <section className="hero">
+        <div className="hero-left">
+          <span className="badge">Energía Inteligente en Guadalajara</span>
+
+          <h1>
+            Reduce tu recibo de luz con paneles solares profesionales
+          </h1>
+
+          <p>
+            Instalaciones residenciales y comerciales con equipos premium,
+            ingeniería profesional y soporte real.
+          </p>
+
+          <div className="hero-buttons">
+            <a
+              className="btn-primary"
+              href="https://wa.me/523313313170"
+              target="_blank"
+            >
+              WhatsApp
+            </a>
+
+            <a className="btn-outline" href="#servicios">
+              Ver Servicios
+            </a>
+          </div>
+        </div>
+
+        <div className="hero-card">
+          <div className="stat">⚡ Ahorro hasta 95%</div>
+          <div className="stat">🛠 Garantía real</div>
+          <div className="stat">📄 Trámite CFE</div>
+          <div className="stat">📱 Monitoreo App</div>
+        </div>
+      </section>
+
+      {/* SERVICIOS */}
+      <section id="servicios" className="section">
+        <h2>Servicios</h2>
+
+        <div className="grid">
+          <div className="card">Paneles Residenciales</div>
+          <div className="card">Paneles para Negocios</div>
+          <div className="card">Calentadores Solares</div>
+          <div className="card">Mantenimiento</div>
+          <div className="card">Trámites CFE</div>
+          <div className="card">Diagnóstico Energético</div>
+        </div>
+      </section>
+
+      {/* BENEFICIOS */}
+      <section id="beneficios" className="section dark">
+        <h2>¿Por qué elegirnos?</h2>
+
+        <div className="grid">
+          <div className="card">Atención personalizada</div>
+          <div className="card">Equipos premium</div>
+          <div className="card">Instalación limpia</div>
+          <div className="card">Retorno de inversión rápido</div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section id="contacto" className="cta">
+        <h2>Solicita tu cotización</h2>
+
+        <p>
+          Envíanos tu recibo de CFE y te ayudamos a ahorrar desde el primer mes.
+        </p>
+
+        <a
+          className="btn-primary big"
+          href="https://wa.me/523313313170"
+          target="_blank"
+        >
+          WhatsApp: 33 1331 3170
+        </a>
+      </section>
+
+      {/* FOOTER */}
+      <footer className="footer">
+        © 2026 BRIDA ENERGY · Guadalajara, Jalisco
+      </footer>
+    </main>
+  );
+}
